@@ -1,0 +1,56 @@
+/* New Styles */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.tabs button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tabs button.active {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
+
+.media-upload {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 20px 0;
+}
+
+.results {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.audio-results, .text-results {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+video, audio {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    margin: 15px 0;
+}

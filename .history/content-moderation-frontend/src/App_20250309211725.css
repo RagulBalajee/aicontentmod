@@ -1,0 +1,110 @@
+/* Gradient Animation with Pink Shades */
+@keyframes gradientBackground {
+  0% {
+      background: linear-gradient(135deg, #d6336c, #f06595); /* Dark Pink to Mild Pink */
+  }
+  50% {
+      background: linear-gradient(135deg, #f06595, #ffc2d1); /* Mild Pink to Light Pink */
+  }
+  100% {
+      background: linear-gradient(135deg, #d6336c, #f06595); /* Dark Pink to Mild Pink */
+  }
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333; /* Dark text for contrast */
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: gradientBackground 10s ease infinite; /* Apply gradient animation */
+  background-size: 200% 200%; /* For smoother transitions */
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white for contrast */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  max-width: 500px;
+  width: 90%;
+}
+
+h1 {
+  color: #d6336c; /* Dark Pink for contrast */
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #555; /* Slightly darker text for readability */
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #d6336c; /* Dark Pink for contrast */
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.custom-file-upload:hover {
+  background: #c2255c; /* Slightly darker pink on hover */
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #f06595; /* Mild Pink for contrast */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #e05285; /* Slightly darker mild pink on hover */
+}
+
+.error-message {
+  color: #ff4444; /* Red for error messages */
+  margin-top: 15px;
+}
+
+.result-box {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white for contrast */
+  border-radius: 10px;
+  text-align: left;
+  color: #333; /* Dark text for readability */
+}
+
+.result-box h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.result-box p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.result-box span {
+  font-weight: bold;
+}

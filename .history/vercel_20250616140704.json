@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "content-moderation-frontend/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/content-moderation-frontend/$1"
+    }
+  ],
+  "outputDirectory": "content-moderation-frontend"
+} 

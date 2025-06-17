@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Content Moderation - Safe Content Detection</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <h1>Content Moderation AI</h1>
+            </div>
+            <p class="subtitle">Advanced AI-powered content safety detection for images and videos</p>
+        </header>
+
+        <main class="main-content">
+            <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-content">
+                        <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                        <h3>Upload Your Content</h3>
+                        <p>Drag and drop your image or video here, or click to browse</p>
+                        <div class="file-types">
+                            <span class="file-type">Images: PNG, JPG, JPEG, GIF, BMP, WEBP</span>
+                            <span class="file-type">Videos: MP4, AVI, MOV, MKV, WMV, FLV</span>
+                        </div>
+                        <div class="file-size-limit">
+                            <i class="fas fa-info-circle"></i>
+                            Maximum file size: 50MB
+                        </div>
+                        <button onclick="testUpload()" style="margin-top: 10px; padding: 8px 16px; background: #667eea; color: white; border: none; border-radius: 8px; cursor: pointer;">Test Upload</button>
+                        
+                        <!-- Simple test file input -->
+                        <div style="margin-top: 15px; padding: 10px; background: #f0f0f0; border-radius: 8px;">
+                            <p style="margin-bottom: 10px; font-size: 14px; color: #666;">Debug: Simple file input</p>
+                            <input type="file" id="testFileInput" accept="image/*,video/*" onchange="testFileSelect()" style="display: block; margin: 0 auto;">
+                        </div>
+                    </div>
+                    <input type="file" id="fileInput" accept="image/*,video/*" style="display: none;">
+                </div>
+
+                <div class="upload-progress" id="uploadProgress" style="display: none;">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p class="progress-text" id="progressText">Analyzing content...</p>
+                </div>
+            </div>
+
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <div class="result-card" id="resultCard">
+                    <div class="result-header">
+                        <div class="result-icon" id="resultIcon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="result-title">
+                            <h2 id="resultTitle">Content Analysis Complete</h2>
+                            <p id="resultSubtitle">Your content has been analyzed for safety</p>
+                        </div>
+                    </div>
+                    
+                    <div class="result-details" id="resultDetails">
+                        <div class="detail-item">
+                            <span class="detail-label">Status:</span>
+                            <span class="detail-value" id="statusValue">Safe</span>
+                        </div>
+                        <div class="detail-item" id="reasonItem" style="display: none;">
+                            <span class="detail-label">Reason:</span>
+                            <span class="detail-value" id="reasonValue">-</span>
+                        </div>
+                        <div class="detail-item" id="confidenceItem" style="display: none;">
+                            <span class="detail-label">Confidence:</span>
+                            <span class="detail-value" id="confidenceValue">-</span>
+                        </div>
+                        <div class="detail-item" id="fileTypeItem" style="display: none;">
+                            <span class="detail-label">File Type:</span>
+                            <span class="detail-value" id="fileTypeValue">-</span>
+                        </div>
+                        <div class="detail-item" id="framesItem" style="display: none;">
+                            <span class="detail-label">Frames Analyzed:</span>
+                            <span class="detail-value" id="framesValue">-</span>
+                        </div>
+                    </div>
+                    
+                    <div class="result-actions">
+                        <button onclick="resetForm()" class="btn btn-secondary">Analyze Another File</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-section">
+                <h3>What We Detect</h3>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h4>Violence</h4>
+                        <p>Physical violence and aggressive behavior</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-skull"></i>
+                        <h4>Gore</h4>
+                        <p>Graphic violence and blood content</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-gun"></i>
+                        <h4>Weapons</h4>
+                        <p>Firearms, knives, and dangerous objects</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-ban"></i>
+                        <h4>Inappropriate Content</h4>
+                        <p>Adult content and nudity detection</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Content Moderation AI. Powered by advanced machine learning.</p>
+        </footer>
+    </div>
+
+    <script src="script.js?v=1.2"></script>
+</body>
+</html>

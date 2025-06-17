@@ -1,0 +1,23 @@
+import os
+import pandas as pd
+
+# Define dataset path
+dataset_path = "ViolenceContent"
+
+# Get class names (subfolders)
+categories = sorted(os.listdir(dataset_path))
+
+# Collect file paths and labels
+data = []
+for category in categories:
+    category_path = os.path.join(dataset_path, category)
+    if os.path.isdir(category_path):
+        for file in os.listdir(category_path):
+            if file.endswith((".jpg", ".png", ".jpeg", ".mp4", ".avi")):
+                data.append([os.path.join(category, file), category])
+
+# Save as CSV
+df = pd.DataFrame(data, columns=["file_path", "label"])
+df.to_csv(os.path.join(dataset_path, "labels_violence.csv"), index=False)
+
+print("✅ labels_violence.csv created successfully!")

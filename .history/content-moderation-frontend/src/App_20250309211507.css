@@ -1,0 +1,116 @@
+/* Gradient Animation with Mild Colors */
+@keyframes gradientBackground {
+  0% {
+      background: linear-gradient(135deg, #a8e6cf, #dcedc1); /* Mint Green to Light Green */
+  }
+  25% {
+      background: linear-gradient(135deg, #ffd3b6, #ffaaa5); /* Peach to Light Coral */
+  }
+  50% {
+      background: linear-gradient(135deg, #ff8b94, #ffb3ba); /* Light Pink to Pastel Pink */
+  }
+  75% {
+      background: linear-gradient(135deg, #b2f2bb, #c3fae8); /* Light Mint to Soft Aqua */
+  }
+  100% {
+      background: linear-gradient(135deg, #a8e6cf, #dcedc1); /* Mint Green to Light Green */
+  }
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333; /* Darker text for better contrast */
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: gradientBackground 15s ease infinite; /* Apply gradient animation */
+  background-size: 200% 200%; /* For smoother transitions */
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.8); /* Slightly more opaque for better contrast */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  max-width: 500px;
+  width: 90%;
+}
+
+h1 {
+  color: #ff6600; /* Orange for contrast */
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #555; /* Slightly darker text for readability */
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ff6600; /* Orange for contrast */
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.custom-file-upload:hover {
+  background: #e65c00; /* Darker orange on hover */
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #28a745; /* Green for contrast */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #218838; /* Darker green on hover */
+}
+
+.error-message {
+  color: #ff4444; /* Red for error messages */
+  margin-top: 15px;
+}
+
+.result-box {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9); /* Slightly more opaque for better contrast */
+  border-radius: 10px;
+  text-align: left;
+  color: #333; /* Darker text for readability */
+}
+
+.result-box h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.result-box p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.result-box span {
+  font-weight: bold;
+}

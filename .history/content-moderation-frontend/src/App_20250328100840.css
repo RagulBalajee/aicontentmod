@@ -1,0 +1,152 @@
+:root {
+    --primary: #6366f1;
+    --danger: #ef4444;
+    --success: #22c55e;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 2rem;
+  }
+  
+  .container {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .title {
+    color: #1e293b;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .subtitle {
+    color: #64748b;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .dropzone {
+    border: 2px dashed #cbd5e1;
+    border-radius: 1rem;
+    padding: 3rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+  }
+  
+  .dropzone.active {
+    border-color: var(--primary);
+    background: #f8fafc;
+  }
+  
+  .media-preview {
+    margin: 2rem 0;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  
+  .media-preview img, 
+  .media-preview video {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .analyze-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+  
+  .analyze-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+  
+  .analyze-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  .result-card {
+    background: #f8fafc;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .meter-bar {
+    height: 1.5rem;
+    background: var(--primary);
+    border-radius: 0.5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    font-weight: 500;
+    transition: width 0.3s ease;
+  }
+  
+  .detail-scores {
+    margin-top: 1.5rem;
+  }
+  
+  .score-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0.5rem 0;
+  }
+  
+  progress {
+    flex-grow: 1;
+    height: 8px;
+    border-radius: 4px;
+  }
+  
+  .error {
+    color: var(--danger);
+    background: #fee2e2;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .supported-files {
+    color: #64748b;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+  }
+  
+  .text-input textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.75rem;
+    min-height: 100px;
+    font-family: inherit;
+  }
