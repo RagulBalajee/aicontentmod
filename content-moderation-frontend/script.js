@@ -1,5 +1,5 @@
 // Configuration - Update this for deployment
-const API_URL = 'http://localhost:5001';
+const API_URL = 'https://aicontentmod.onrender.com';
 
 // DOM elements
 const dropZone = document.getElementById('uploadArea');
